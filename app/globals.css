@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --primary: #0f172a;
+  --primary-fg: #ffffff;
+  --muted: #64748b;
+}
+
+html, body { height: 100%; }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-heebo), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition;
+}
+.btn-primary { @apply bg-slate-900 text-white hover:bg-slate-800; }
+.btn-secondary { @apply bg-white border border-slate-300 text-slate-900 hover:bg-slate-50; }
+.btn-danger { @apply bg-red-600 text-white hover:bg-red-700; }
+.btn-lg { @apply px-6 py-4 text-lg rounded-xl; }
+
+/* Inputs */
+.input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-slate-500 focus:ring-2 focus:ring-slate-200;
+}
+.label { @apply mb-1 block text-sm font-medium text-slate-700; }
+
+/* Card */
+.card {
+  @apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
+}
+
+/* Table */
+.table { @apply w-full text-right text-sm; }
+.table thead th { @apply bg-slate-50 px-3 py-2 font-medium text-slate-600; }
+.table tbody td { @apply border-t border-slate-100 px-3 py-2; }
+
+/* Status pill */
+.pill { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium; }
