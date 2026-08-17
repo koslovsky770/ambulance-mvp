@@ -3,6 +3,7 @@ node_modules
 out
 .env
 .env.local
+# .env.production intentionally committed — contains publishable Supabase keys only (RLS-protected).
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
